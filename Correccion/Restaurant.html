@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="Author" content="Mayra Gaibor y Osacr Rivera">
+<meta name="Desciptio" content="Pagina de Restaurante YAVIRAC">
+<meta name="keywords" content="restaurante, chicharron, guatita"> 
+
+	<title>Correccion de la prueba</title>
+
+	
+</head>
+<body>		
+
+			<header>Restaurante YAVIRAC</header>
+			<p>Cualquier plato a $0.75</p>
+
+		<table border="2">
+       <tr>
+       	<td >
+       		<img id="img" width="100px" src="imag1.jpg">
+       	</td>
+       	
+       	 
+        		<td>
+		       		<table width="100%" align="">
+		       		<form action="">
+		       			
+		       		
+		       			
+		       			<tr>
+		       				<td>
+		       				# de chicharron:
+		       				
+		       					 <input  id="chicharron"  size="22"  type="text" onchange="calcular()" onclick="imagen(1)"value="0"></input>
+		       				</td>
+		       			</tr>
+		       			<tr>
+		       				<td align="rigth">
+		       				# de guatitas: 
+		       					<input id="guatita" size="20" type="text" onkeyup="calcular()" onclick="imagen(2)" value="0"  ></input>
+		       				</td>
+		       			</tr>
+		       			
+		       			<tr>
+		       				<td align="rigth">
+		       				Total: 
+		       					<input id="total" size="33" type="text"></input>
+		       				</td>
+		       			</tr>
+
+		       			</form>
+		       	</table>
+       			
+       		</tr>
+      
+    </table>
+
+<script>
+function calcular() {
+	var u = 0.75;
+	var chi = document.getElementById("chicharron").value;
+	var gua = document.getElementById("guatita").value;
+	 chi = parseInt(chi);
+	 gua = parseInt(gua);
+	// var l = gua + chi;
+	var t = gua + chi;
+
+	 document.getElementById("total").value = t;
+
+   
+}
+function imagen(valor){
+	if(valor=='1'){
+		document.images.img.src="imag1.jpg";
+	}
+	if(valor=='2'){
+		document.images.img.src="img2.jpg";
+	}
+	
+}
+
+</script>
+<footer><a href="www.google.com"> Ir a Google</a></footer>
+</body>
+</html>
